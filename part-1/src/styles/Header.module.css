@@ -1,0 +1,8 @@
+.header{
+    background-color: blueviolet;
+    padding: 1em;
+}
+.header *{
+    color: #fff;
+    
+}
