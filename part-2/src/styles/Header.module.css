@@ -1,0 +1,21 @@
+.header{
+    background-color: blueviolet;
+    padding: 1em;
+}
+.header *{
+    color: #fff;
+    
+}
+.header ul{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    list-style: none;
+    
+}
+.header *{
+    text-decoration: none;
+}
+.header ul li{
+    margin-right: 1em;
+}
