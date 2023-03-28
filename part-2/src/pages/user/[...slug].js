@@ -4,6 +4,7 @@ import React, { useEffect, useState } from 'react'
 const UserComp = ({data}) => {
   const router=useRouter();
   const [user, setUser] = useState();
+  console.log(router);
   // const {id}=router.query;
   // useEffect(()=>{
   //   const getData=async()=>{
@@ -38,13 +39,13 @@ const UserComp = ({data}) => {
 
 export default UserComp;
 
-export const getServerSideProps=async (context)=>{
-  const res=await fetch(`https://jsonplaceholder.typicode.com/users/${context.params.id}`);
-  const data=await res.json();
-  console.log(context);
-  return {
-    props :{
-      data
-    }
-  }
-}
+// export const getServerSideProps=async (context)=>{
+//   const res=await fetch(`https://jsonplaceholder.typicode.com/users/${context.params.id}`);
+//   const data=await res.json();
+//   console.log(context);
+//   return {
+//     props :{
+//       data
+//     }
+//   }
+// }
