@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import styles from '@/styles/Home.module.css'
 import { useRouter } from 'next/router';
+import Image from 'next/image';
 
 
 export default function Home({users}) {
@@ -13,6 +14,14 @@ export default function Home({users}) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <div style={{
+        position: "relative", 
+        minWidth:"100%",
+        height:"500px",
+        overflow:"hidden",
+      }}>
+      <Image src='/images/obito.jpg' layout='fill' objectFit='cover'/>
+      </div>
       <h1>Home</h1>
       <h2>User List</h2>
       {
