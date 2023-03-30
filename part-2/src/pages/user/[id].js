@@ -57,7 +57,7 @@ export default UserComp;
 // Static paths
 
 export const getStaticPaths= async ()=>{ 
-  const res=await fetch(`https://jsonplaceholder.typicode.com/users/`);
+  const res=await fetch(`http://localhost:3000/api/users/`);
   const datas=await res.json();
   const ids = datas.map((user)=>user.id);
   const paths=ids.map((id)=>({params:{id: id.toString()}}));
@@ -73,7 +73,7 @@ export const getStaticPaths= async ()=>{
 
 // Static props
 export const getStaticProps= async (context)=>{ 
-  const res=await fetch(`https://jsonplaceholder.typicode.com/users/${context.params.id}`);
+  const res=await fetch(`http://localhost:3000/api/users/${context.params.id}`);
   const data=await res.json();
   return{
     props :{
